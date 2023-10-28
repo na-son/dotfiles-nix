@@ -8,7 +8,7 @@
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   #inputs.systems.url = "path:./flake.systems.nix";
-  inputs.systems.url = "git+file:./flake.systems.nix&rev=HEAD";
+  inputs.systems.url = "git+file:./flake.systems.nix?branch=🔥&rev=HEAD";
   inputs.systems.flake = false;
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
