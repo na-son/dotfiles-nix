@@ -7,7 +7,8 @@
   inputs.home-manager.url = "github:nix-community/home-manager";
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-  inputs.systems.url = "path:./flake.systems.nix";
+  #inputs.systems.url = "path:./flake.systems.nix";
+  inputs.systems.url = "git+file:./flake.systems.nix";
   inputs.systems.flake = false;
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
@@ -193,7 +194,7 @@
     in (mkConfigurations [
       {
         host = "chi";
-        user = "enzime";
+        user = "nason";
         system = "aarch64-darwin";
         modules =
           builtins.attrNames { inherit (modules) linux-builder personal; };
@@ -201,13 +202,13 @@
       {
         host = "hermes";
         hostSuffix = "-macos";
-        user = "enzime";
+        user = "nason";
         system = "aarch64-darwin";
         modules = builtins.attrNames { inherit (modules) laptop personal; };
       }
       {
         host = "hermes";
-        user = "enzime";
+        user = "nason";
         system = "aarch64-linux";
         nixos = true;
         modules =
@@ -215,7 +216,7 @@
       }
       {
         host = "phi";
-        user = "enzime";
+        user = "nason";
         system = "x86_64-linux";
         nixos = true;
         modules = builtins.attrNames {
@@ -226,7 +227,7 @@
       }
       {
         host = "sigma";
-        user = "enzime";
+        user = "nason";
         system = "x86_64-linux";
         nixos = true;
         modules = builtins.attrNames {
@@ -236,7 +237,7 @@
       {
         host = "achilles";
         hostSuffix = "";
-        user = "enzime";
+        user = "nason";
         system = "aarch64-linux";
         nixos = true;
         modules = builtins.attrNames {
